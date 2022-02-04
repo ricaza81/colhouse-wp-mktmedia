@@ -98,7 +98,7 @@ class User extends Authenticatable
        $tenant=User::findOrFail($id);
        $id_unidad=$tenant->property_sub_id;
        $unidad=PropertySub::findOrFail($id_unidad);//->where('deleted_at',NULL);
-       $seguro_unidad=PropertiesSeguros::where('id_property_sub',$unidad->id)
+       $seguro_unidad=PropertiesSeguros::where('id_property_sub',$unidad->id)->where('estado','=',1)
        ->pluck('estado')
        ->first();
        return($seguro_unidad);
