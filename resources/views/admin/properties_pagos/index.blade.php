@@ -33,6 +33,9 @@
                         <th>@lang('global.facturas.fields.unidad')</th>
                         <th>Estado</th>
                         <th style="text-align:center;">Seguro</th>
+
+
+
                         
                     </tr>
                 </thead>
@@ -88,20 +91,25 @@
                                 @endif
                                
                                 </td>
+                                
+                                @if($inquilino->seguro_tenant($inquilino->id) != NULL ) 
                                 <td>
                                     
-                                     @if($inquilino->seguro_tenant($inquilino->id) != NULL ) 
+                                   
                                            <a href="{{ route('admin.properties_sub.show',[$inquilino->subproperty->id]) }}">
                                             <span class="m-status" style="background:#5cb85c;color:#fff;float:left;">
                                             Si
                                             </span>
                                             </a>
+                                </td>
                                          @else
+                                <td style="background:#f7bd0e;"> 
                                             <a href="{{ route('admin.properties_sub.show',[$inquilino->subproperty->id]) }}">
                                             <span class="m-status" style="background:#d7564a;color:#fff;float:left;">
                                             No
                                             </span>
                                             </a>
+                                </td>
                                 @endif
                                     
         </td>
