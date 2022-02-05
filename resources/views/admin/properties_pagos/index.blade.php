@@ -103,7 +103,7 @@
                                             </a>
                                 </td>
                                          @else
-                                <td style="background:#f7bd0e;"> 
+                                <td style="background:#f7bd0e;padding-left:24px;"> 
                                             <a href="{{ route('admin.properties_sub.show',[$inquilino->subproperty->id]) }}"  target="_blank">
                                             <span class="m-status" style="background:#d7564a;color:#fff;float:left;">
                                             No
