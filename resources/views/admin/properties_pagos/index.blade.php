@@ -96,7 +96,7 @@
                                 <td>
                                     
                                    
-                                           <a href="{{ route('admin.properties_sub.show',[$inquilino->subproperty->id]) }}">
+                                           <a href="{{ route('admin.properties_sub.show',[$inquilino->subproperty->id]) }}" target="_blank">>
                                             <span class="m-status" style="background:#5cb85c;color:#fff;float:left;">
                                             Si
                                             </span>
@@ -104,7 +104,7 @@
                                 </td>
                                          @else
                                 <td style="background:#f7bd0e;"> 
-                                            <a href="{{ route('admin.properties_sub.show',[$inquilino->subproperty->id]) }}">
+                                            <a href="{{ route('admin.properties_sub.show',[$inquilino->subproperty->id]) }}"  target="_blank">
                                             <span class="m-status" style="background:#d7564a;color:#fff;float:left;">
                                             No
                                             </span>
@@ -165,6 +165,7 @@
     user-select: none;
     color: #b44d12;
     background-color: #fff3c4;
+    padding-top: 100px;
 }
 </style>
 @endsection
